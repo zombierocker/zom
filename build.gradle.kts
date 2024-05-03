@@ -184,3 +184,13 @@ tasks.named<DefaultTask>("publish").configure {
     finalizedBy("publishToCurseForge")
 }
 
+repositories {
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' 
+    }
+}
+
+dependencies {
+        implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19:3.1.40')
+}
